@@ -23,7 +23,7 @@ public class LoginActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         this._context = this;
         _email = (EditText) findViewById(R.id.email_edittext);
@@ -31,8 +31,6 @@ public class LoginActivity extends Activity {
         _skip = (Button) findViewById(R.id.skip_button);
         _signup = (Button) findViewById(R.id.signup_button);
         _login = (Button) findViewById(R.id.login_button);
-
-        generateSampleFields();
 
         _skip.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,9 +68,7 @@ public class LoginActivity extends Activity {
         });
     }
 
-    public void generateSampleFields() {
 
-    }
 
 
     @Override

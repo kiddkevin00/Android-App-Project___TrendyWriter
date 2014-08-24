@@ -11,6 +11,9 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class FieldsActivity extends Activity {
@@ -21,6 +24,7 @@ public class FieldsActivity extends Activity {
 
     private static final String TAG = LoginActivity.class.getName();
 
+    public List<Map<String, String>> fieldList = null;
     public String signupEmail;
     public String signupPassword;
     public String loginEmail;
@@ -31,6 +35,8 @@ public class FieldsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fields);
         this._context = this;
+
+        generateSampleFields();
 
         Intent intent = this.getIntent();
         Bundle bundle = intent.getExtras();
@@ -53,10 +59,32 @@ public class FieldsActivity extends Activity {
         }
 
         // set adapter
-        _adapter = new FieldlistAdpter(_context, R.layout.adapter_fieldlist, new ArrayList());
+        _adapter = new FieldlistAdpter(_context, R.layout.adapter_fieldlist, fieldList);
         _fieldList = (ListView) findViewById(R.id.listView);
         _fieldList.setAdapter(_adapter);
 
+    }
+
+    public void generateSampleFields() {
+        fieldList = new ArrayList<Map<String, String>>();
+        Map sample01 = new HashMap();
+        Map sample02 = new HashMap();
+        Map sample03 = new HashMap();
+        sample01.put("PERCENTAGE", "50%");
+        sample01.put("KEYWORD", "william");
+        sample01.put("DATE", "2014-08-10");
+
+        sample02.put("PERCENTAGE", "100%");
+        sample02.put("KEYWORD", "obama");
+        sample02.put("DATE", "2014-08-20");
+
+        sample03.put("PERCENTAGE", "80%");
+        sample03.put("KEYWORD", "challenge");
+        sample03.put("DATE", "2014-08-22");
+
+        fieldList.add(sample01);
+        fieldList.add(sample02);
+        fieldList.add(sample03);
     }
 
 
