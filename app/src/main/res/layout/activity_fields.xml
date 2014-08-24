@@ -5,32 +5,22 @@
     android:background="@drawable/coming_soon"
     android:orientation="vertical"
     tools:context="com.miworks.trendywriter.FieldsActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
-            android:text="level"
-            android:layout_width="75dp"
+            android:text="field"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView1"
-            android:textSize="30sp" />
-
+            android:textSize="60sp" />
         <TextView
-            android:text="keyword"
-            android:layout_width="125dp"
+            android:text="size"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
-            android:textSize="30sp" />
-
-        <TextView
-            android:text="mm-dd-yy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView3"
-            android:textSize="30sp" />
+            android:textSize="60sp" />
     </LinearLayout>
 
     <ListView

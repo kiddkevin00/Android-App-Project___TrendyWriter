@@ -45,8 +45,8 @@ public class FieldsActivity extends Activity {
         if (DebugSetting.on == true)
             Log.d(TAG, "user signup : " + signupEmail + " ; " + signupPassword);
         if (signupEmail != null && !signupEmail.equals("")) {
-            Toast.makeText(FieldsActivity.this, "User signup : " + signupEmail + " ; "
-                    + signupPassword, Toast.LENGTH_SHORT).show();
+            Toast.makeText(FieldsActivity.this, "Welcome " + signupEmail + " ! "
+                    , Toast.LENGTH_SHORT).show();
         }
 
         loginEmail = bundle.getString("LOGIN_EMAIL");
@@ -54,8 +54,8 @@ public class FieldsActivity extends Activity {
         if (DebugSetting.on == true)
             Log.d(TAG, "user login : " + loginEmail + " ; " + loginPassword);
         if (loginEmail != null && !loginEmail.equals("")) {
-            Toast.makeText(FieldsActivity.this, "User login : " + loginEmail + " ; "
-                    + loginPassword, Toast.LENGTH_SHORT).show();
+            Toast.makeText(FieldsActivity.this, "Welcome back " + loginEmail + " ! "
+                    , Toast.LENGTH_SHORT).show();
         }
 
         // set adapter
@@ -70,17 +70,14 @@ public class FieldsActivity extends Activity {
         Map sample01 = new HashMap();
         Map sample02 = new HashMap();
         Map sample03 = new HashMap();
-        sample01.put("PERCENTAGE", "50%");
-        sample01.put("KEYWORD", "william");
-        sample01.put("DATE", "2014-08-10");
+        sample01.put("FIELD", "politic");
+        sample01.put("SIZE", "25");
 
-        sample02.put("PERCENTAGE", "100%");
-        sample02.put("KEYWORD", "obama");
-        sample02.put("DATE", "2014-08-20");
+        sample02.put("FIELD", "sport");
+        sample02.put("SIZE", "50");
 
-        sample03.put("PERCENTAGE", "80%");
-        sample03.put("KEYWORD", "challenge");
-        sample03.put("DATE", "2014-08-22");
+        sample03.put("FIELD", "travel");
+        sample03.put("SIZE", "37");
 
         fieldList.add(sample01);
         fieldList.add(sample02);

@@ -13,18 +13,17 @@ import java.util.List;
 import java.util.Map;
 
 
-public class FieldlistAdpter extends ArrayAdapter implements View.OnClickListener {
+public class FieldlistAdpter extends ArrayAdapter<Map<String, String>> implements View.OnClickListener {
 
-    class LayoutForm {
-        public TextView _percentage;
-        public TextView _keyword;
-        public TextView _date;
+    private class LayoutForm {
+        private TextView _field;
+        private TextView _size;
     }
 
     private Activity _activity;
-    private LayoutForm item;
+    private LayoutForm _item;
 
-    public List<Map<String, String>> fieldList;
+    public List<Map<String, String>> fieldList = null;
 
     public FieldlistAdpter(Context context, int resource, List<Map<String, String>> objects) {
         super(context, resource, objects);
@@ -38,18 +37,16 @@ public class FieldlistAdpter extends ArrayAdapter implements View.OnClickListene
         if (_row == null) {
             LayoutInflater inflater = _activity.getLayoutInflater();
             _row = inflater.inflate(R.layout.adapter_fieldlist, null);
-            item = new LayoutForm();
-            item._percentage = (TextView) _row.findViewById(R.id.percentage_text);
-            item._keyword = (TextView) _row.findViewById(R.id.keyword_text);
-            item._date = (TextView) _row.findViewById(R.id.date_text);
-            _row.setTag(item);
+            _item = new LayoutForm();
+            _item._field = (TextView) _row.findViewById(R.id.field_text);
+            _item._size = (TextView) _row.findViewById(R.id.size_text);
+            _row.setTag(_item);
             _row.setOnClickListener(this);
         }
-        item = (LayoutForm) _row.getTag();
+        _item = (LayoutForm) _row.getTag();
         Map<String, String> map = fieldList.get(position);
-        item._percentage.setText(map.get("PERCENTAGE"));
-        item._keyword.setText(map.get("KEYWORD"));
-        item._date.setText(map.get("DATE"));
+        _item._field.setText(map.get("FIELD"));
+        _item._size.setText(map.get("SIZE"));
         return _row;
     }
 
