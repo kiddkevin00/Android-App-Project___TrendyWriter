@@ -33,6 +33,10 @@
             android:name=".TopicsActivity"
             android:label="@string/title_activity_choice" >
         </activity>
+        <activity
+            android:name=".BookmarkActivity"
+            android:label="@string/title_activity_bookmark" >
+        </activity>
     </application>
 
     <compatible-screens>

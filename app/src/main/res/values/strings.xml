@@ -10,5 +10,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_topiclist_adpter">topiclistAdpter</string>
     <string name="title_activity_choice">ChoiceActivity</string>
+    <string name="title_activity_bookmark">BookmarkActivity</string>
+    <string name="title_activity_bookmark_adapter">BookmarkAdapter</string>
+    <string name="title_activity_topiclist_adapter">TopiclistAdapter</string>
 
 </resources>

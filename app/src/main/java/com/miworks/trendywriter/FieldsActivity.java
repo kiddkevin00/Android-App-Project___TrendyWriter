@@ -53,7 +53,7 @@ public class FieldsActivity extends Activity {
         }
 
         // set adapter
-        _adapter = new FieldlistAdpter(_context, R.layout.fieldlist_adpter, new ArrayList());
+        _adapter = new FieldlistAdpter(_context, R.layout.adapter_fieldlist, new ArrayList());
         _fieldList = (ListView) findViewById(R.id.listView);
         _fieldList.setAdapter(_adapter);
 
