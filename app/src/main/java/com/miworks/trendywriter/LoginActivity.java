@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
-public class MainActivity extends Activity {
+public class LoginActivity extends Activity {
 
     private Context _context;
     private EditText _email;
@@ -32,10 +32,15 @@ public class MainActivity extends Activity {
         _signup = (Button) findViewById(R.id.signup_button);
         _login = (Button) findViewById(R.id.login_button);
 
+        generateSampleFields();
+
         _skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TopicsActivity.class);
+                Intent intent = new Intent(LoginActivity.this, FieldsActivity.class);
+                Bundle bundle3 = new Bundle();
+                bundle3.putString("key", "value");
+                intent.putExtras(bundle3);
                 startActivity(intent);
             }
         });
@@ -43,7 +48,7 @@ public class MainActivity extends Activity {
         _signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(MainActivity.this, TopicsActivity.class);
+                Intent intent2 = new Intent(LoginActivity.this, FieldsActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("SIGNUP_EMAIL", _email.getText().toString());
                 bundle.putString("SIGNUP_PASSWORD", _password.getText().toString());
@@ -55,7 +60,7 @@ public class MainActivity extends Activity {
         _login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent3 = new Intent(MainActivity.this, TopicsActivity.class);
+                Intent intent3 = new Intent(LoginActivity.this, FieldsActivity.class);
                 Bundle bundle2 = new Bundle();
                 bundle2.putString("LOGIN_EMAIL", _email.getText().toString());
                 bundle2.putString("LOGIN_PASSWORD", _password.getText().toString());
@@ -63,7 +68,9 @@ public class MainActivity extends Activity {
                 startActivity(intent3);
             }
         });
+    }
 
+    public void generateSampleFields() {
 
     }
 

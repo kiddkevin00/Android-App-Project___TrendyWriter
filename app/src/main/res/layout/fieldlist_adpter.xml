@@ -6,10 +6,10 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.miworks.trendywriter.TopicsActivity">
+    tools:context="com.miworks.trendywriter.FieldlistAdpter">
 
     <TextView
-        android:text="Here are choices within the chosen topic.."
+        android:text="@string/hello_world"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

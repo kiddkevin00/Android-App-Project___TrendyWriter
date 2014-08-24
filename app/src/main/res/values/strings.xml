@@ -8,5 +8,7 @@
     <string name="login_button">log in</string>
     <string name="title_activity_topics">TopicsActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_topiclist_adpter">topiclistAdpter</string>
+    <string name="title_activity_choice">ChoiceActivity</string>
 
 </resources>
