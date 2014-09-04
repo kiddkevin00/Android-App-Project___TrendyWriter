@@ -22,7 +22,7 @@ public class FieldsActivity extends Activity {
     private FieldlistAdpter _adapter;
     private ListView _fieldList;
 
-    private static final String TAG = LoginActivity.class.getName();
+    private static final String TAG = "## " + LoginActivity.class.getName();
 
     public List<Map<String, String>> fieldList = null;
     public String signupEmail;
@@ -44,6 +44,7 @@ public class FieldsActivity extends Activity {
         signupPassword = bundle.getString("SIGNUP_PASSWORD");
         if (DebugSetting.on == true)
             Log.d(TAG, "user signup : " + signupEmail + " ; " + signupPassword);
+        // if click log-in button and type nothing, signupEmail == null; loginEmail.equals("");
         if (signupEmail != null && !signupEmail.equals("")) {
             Toast.makeText(FieldsActivity.this, "Welcome " + signupEmail + " ! "
                     , Toast.LENGTH_SHORT).show();

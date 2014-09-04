@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,6 +28,7 @@ public class LoginActivity extends Activity {
 
         this._context = this;
         _email = (EditText) findViewById(R.id.email_edittext);
+        Log.d("***", "name : "+(_email.getText().toString().equals("")));
         _password = (EditText) findViewById(R.id.password_edittext);
         _skip = (Button) findViewById(R.id.skip_button);
         _signup = (Button) findViewById(R.id.signup_button);

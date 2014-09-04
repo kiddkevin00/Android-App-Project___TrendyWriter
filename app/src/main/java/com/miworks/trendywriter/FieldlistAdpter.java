@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 
+
 public class FieldlistAdpter extends ArrayAdapter<Map<String, String>> implements View.OnClickListener {
 
     private class LayoutForm {
