@@ -71,18 +71,35 @@ public class FieldsActivity extends Activity {
         Map sample01 = new HashMap();
         Map sample02 = new HashMap();
         Map sample03 = new HashMap();
-        sample01.put("FIELD", "politic");
-        sample01.put("SIZE", "25");
+        Map sample04 = new HashMap();
+        Map sample05 = new HashMap();
+        Map sample06 = new HashMap();
+        Map sample07 = new HashMap();
+        Map sample08 = new HashMap();
+        Map sample09 = new HashMap();
+        Map sample10 = new HashMap();
 
-        sample02.put("FIELD", "sport");
-        sample02.put("SIZE", "50");
-
-        sample03.put("FIELD", "travel");
-        sample03.put("SIZE", "37");
+        sample01.put("FIELD", "POLITICS");
+        sample02.put("FIELD", "SPORT");
+        sample03.put("FIELD", "TRAVEL");
+        sample04.put("FIELD", "BUSINESS");
+        sample05.put("FIELD", "ENTERTAIN");
+        sample06.put("FIELD", "TECH");
+        sample07.put("FIELD", "MEDIA");
+        sample08.put("FIELD", "HEALTH");
+        sample09.put("FIELD", "COMEDY");
+        sample10.put("FIELD", "PET");
 
         fieldList.add(sample01);
         fieldList.add(sample02);
         fieldList.add(sample03);
+        fieldList.add(sample04);
+        fieldList.add(sample05);
+        fieldList.add(sample06);
+        fieldList.add(sample07);
+        fieldList.add(sample08);
+        fieldList.add(sample09);
+        fieldList.add(sample10);
     }
 
 

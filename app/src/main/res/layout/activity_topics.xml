@@ -12,25 +12,19 @@
         android:orientation="horizontal">
 
         <TextView
-            android:text="level"
-            android:layout_width="75dp"
+            android:text="rate"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:id="@+id/textView1"
+            android:id="@+id/rate_text"
             android:textSize="30sp" />
 
         <TextView
             android:text="keyword"
-            android:layout_width="125dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            android:textSize="30sp" />
-
-        <TextView
-            android:text="mm-dd-yyyy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3"
-            android:textSize="29sp" />
+            android:id="@+id/keyword_text"
+            android:textSize="30sp" />
+
     </LinearLayout>
 
     <ListView

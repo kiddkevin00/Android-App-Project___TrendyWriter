@@ -18,7 +18,6 @@ public class FieldlistAdpter extends ArrayAdapter<Map<String, String>> implement
 
     private class LayoutForm {
         private TextView _field;
-        private TextView _size;
     }
 
     private Activity _activity;
@@ -40,14 +39,12 @@ public class FieldlistAdpter extends ArrayAdapter<Map<String, String>> implement
             _row = inflater.inflate(R.layout.adapter_fieldlist, null);
             _item = new LayoutForm();
             _item._field = (TextView) _row.findViewById(R.id.field_text);
-            _item._size = (TextView) _row.findViewById(R.id.size_text);
             _row.setTag(_item);
             _row.setOnClickListener(this);
         }
         _item = (LayoutForm) _row.getTag();
         Map<String, String> map = fieldList.get(position);
         _item._field.setText(map.get("FIELD"));
-        _item._size.setText(map.get("SIZE"));
         return _row;
     }
 

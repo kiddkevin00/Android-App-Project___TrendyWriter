@@ -42,17 +42,14 @@ public class TopicsActivity extends Activity {
         Map sample01 = new HashMap();
         Map sample02 = new HashMap();
         Map sample03 = new HashMap();
-        sample01.put("PERCENTAGE", "50%");
+        sample01.put("PERCENTAGE", "✩✩✩✩✩");
         sample01.put("KEYWORD", "william");
-        sample01.put("DATE", "2014-08-10");
 
-        sample02.put("PERCENTAGE", "100%");
+        sample02.put("PERCENTAGE", "✩✩✩✩");
         sample02.put("KEYWORD", "obama");
-        sample02.put("DATE", "2014-08-20");
 
-        sample03.put("PERCENTAGE", "80%");
-        sample03.put("KEYWORD", "water");
-        sample03.put("DATE", "2014-08-22");
+        sample03.put("PERCENTAGE", "✩✩");
+        sample03.put("KEYWORD", "james");
 
         topicList.add(sample01);
         topicList.add(sample02);

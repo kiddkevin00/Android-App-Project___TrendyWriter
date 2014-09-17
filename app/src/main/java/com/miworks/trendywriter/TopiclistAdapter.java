@@ -17,7 +17,6 @@ public class TopiclistAdapter extends ArrayAdapter<Map<String, String>> implemen
     private class LayoutForm {
         private TextView _percentage;
         private TextView _keyword;
-        private TextView _date;
     }
 
     private Activity _activity;
@@ -40,7 +39,6 @@ public class TopiclistAdapter extends ArrayAdapter<Map<String, String>> implemen
             _item = new LayoutForm();
             _item._percentage = (TextView) _row.findViewById(R.id.percentage_text);
             _item._keyword = (TextView) _row.findViewById(R.id.keyword_text);
-            _item._date = (TextView) _row.findViewById(R.id.date_text);
             _row.setTag(_item);
             _row.setOnClickListener(this);
         }
@@ -48,7 +46,6 @@ public class TopiclistAdapter extends ArrayAdapter<Map<String, String>> implemen
         Map<String, String> map = topicList.get(position);
         _item._percentage.setText(map.get("PERCENTAGE"));
         _item._keyword.setText(map.get("KEYWORD"));
-        _item._date.setText(map.get("DATE"));
         return _row;
     }
 
