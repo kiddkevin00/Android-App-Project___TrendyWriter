@@ -21,6 +21,8 @@ public class LoginActivity extends Activity {
     private Button _login;
     private Button _skip;
 
+    private static final String TAG = "@miworks " + LoginActivity.class.getName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +30,9 @@ public class LoginActivity extends Activity {
 
         this._context = this;
         _email = (EditText) findViewById(R.id.email_edittext);
-        Log.d("***", "name : "+(_email.getText().toString().equals("")));
+        if (DebugSetting.on) {
+            Log.d(TAG, "name : " + (_email.getText().toString().equals("")));
+        }
         _password = (EditText) findViewById(R.id.password_edittext);
         _skip = (Button) findViewById(R.id.skip_button);
         _signup = (Button) findViewById(R.id.signup_button);
